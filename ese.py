@@ -2,7 +2,7 @@ import json
 from ast import literal_eval
 import numpy as np
 
-fin = open('C:\\Users\\ignaz\\Desktop\\UCBM\\Programmazione\\ESECodificaNomeUtente\\logs_anonimizzato_1.json')
+fin = open('C:\\Users\\ignaz\\Desktop\\UCBM\\Programmazione\\ESECodificaNomeUtente\\logs_anonimizzato_2.json')
 
 lista_persone = json.load(fin)
 
@@ -33,10 +33,11 @@ for x in my_set:
 fin.close()
 
 # Salvo i log modificati in un nuovo file (cosi non tocco il file originale)
-fin = open('C:\\Users\\ignaz\\Desktop\\UCBM\\Programmazione\\ESECodificaNomeUtente\\logs_anonimizzato_1_new.json','w')
+fin = open('C:\\Users\\ignaz\\Desktop\\UCBM\\Programmazione\\ESECodificaNomeUtente\\logs_anonimizzato_2_new.json','w')
 fin.write(str(new_list))
 fin.close()
 
 
-
-print('\n',my_list)
+# Stampo la lista di tuple per vedere come sono codificati i valori
+for x in my_list:
+    print(x)
