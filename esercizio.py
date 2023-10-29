@@ -12,8 +12,8 @@ def modlist():
                 lista_log[i][1] = rand  # sostituisco il nome con il codice identificativo
 
 
-fin = open('logs_anonimizzato_1.json')
-# fin = open('logs_anonimizzato_2.json')
+# fin = open('logs_anonimizzato_1.json')
+fin = open('logs_anonimizzato_2.json')
 lista_log = json.load(fin) # leggo il file come array python
 
 lung_logs = len(lista_log)  # salvo il numero dei log cosi da poterli iterare piu facilmente
@@ -34,7 +34,7 @@ fin.close() # chiudo il file
 
 json_object = json.dumps(lista_log, indent=2)   # trasformo l'array in un oggetto json
 # salvo i nuovi log in un nuovo file, così da salvare il file originale
-with open('logs_anonimizzato_1_new.json','w')  as of:
+with open('logs_anonimizzato_2_new.json','w')  as of:
     of.write(json_object)   # scrivo nel file
 
 
